@@ -2,7 +2,7 @@ This application is a short demostration of a .NET Web API returning lists of pr
 
 Below is a number of potential changes that - given enough time - could be done to the project to improve on the situation.
 
-#Backend
+# Backend
 
 ## Code
 - Use global exception handling.
@@ -18,15 +18,15 @@ Other than using HTTPS, the API is currently everything but secure. Theoreticall
 - Introducing authentication.
 - Adding an ingress layer.
 
-#Angular Client
-##UI
+# Angular Client
+## UI
 - Potential UI improvements 
     - Making it mobile-friendly (e.g. with Bootstrap and/or with Angular Material).
     - Displayig proper error messages.
     - Remindig users that 1 is not a prime number (currently an empty list comes back).
     - Making the UI look better in general.
 
-##Code
+## Code
 - More separation of concerns, e.g. creating environment variables for API urls, etc.
 - Proper error handling for the API. Currently, everything is dumped into an error message field.
 - Better unit test coverage: shallow integration tests involving the UI, and proper testing of error scenarios.
