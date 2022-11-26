@@ -8,7 +8,7 @@ namespace Primes.API.Core
     {
         public int[] GetPrimesToLimit(int limit)
         {
-            if (limit < 0 || limit > 100) 
+            if (limit <= 0 || limit > 100) 
             {
                 throw new ArgumentOutOfRangeException($"{nameof(limit)} is out of range: it should be between 1 and 100 (inclusive).");
             }

@@ -16,6 +16,11 @@ public class PrimesController : ControllerBase
         this.primesManager = primesManager;
     }
 
+    /// <summary>
+    /// Returns a list of primes to the given upper limit (inclusive).
+    /// </summary>
+    /// <param name="limit">The limit until which the primes should be returned.</param>
+    /// <returns>IEnumarable (int) of primes.</returns>
     [HttpGet("list")]
     public ActionResult<IEnumerable<int>> GetPrimesToLimit([FromQuery] int limit)
     {

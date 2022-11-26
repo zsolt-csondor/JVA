@@ -22,17 +22,29 @@ public class PrimesManagerTests
     }
 
     [Test]
-    public void GetPrimesToLimit_ShouldThrowExceptionOnInvalidLimits()
+    public void GetPrimesToLimit_ShouldThrowExceptionOnNegativeLimit()
     {
         int negativeLimit = -1;
-        int zeroLimit = 0;
-        int tooLargeLimit = 101;
-
         var primesManager = new PrimesManager();
 
         Assert.Throws<ArgumentOutOfRangeException>(() => primesManager.GetPrimesToLimit(negativeLimit));
-        Assert.Throws<ArgumentOutOfRangeException>(() => primesManager.GetPrimesToLimit(zeroLimit));
-        Assert.Throws<ArgumentOutOfRangeException>(() => primesManager.GetPrimesToLimit(tooLargeLimit));
     }
 
+    [Test]
+    public void GetPrimesToLimit_ShouldThrowExceptionOnZeroLimit()
+    {
+        int zeroLimit = 0;
+        var primesManager = new PrimesManager();
+
+        Assert.Throws<ArgumentOutOfRangeException>(() => primesManager.GetPrimesToLimit(zeroLimit));
+    }
+
+    [Test]
+    public void GetPrimesToLimit_ShouldThrowExceptionOnTooLargeLimit()
+    {
+        int tooLargeLimit = 101;
+        var primesManager = new PrimesManager();
+
+        Assert.Throws<ArgumentOutOfRangeException>(() => primesManager.GetPrimesToLimit(tooLargeLimit));
+    }
 }
