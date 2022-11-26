@@ -1,0 +1,59 @@
+.primes-container h1 {
+    font-size: 3em;
+    margin-bottom: -1%;
+}
+
+.h1-description {
+    font-size: 0.9em;
+    color: #4e4e4e;
+}
+
+.h2-error {
+    color: #ff0000;
+}
+
+.primes-container {
+    width: 35%;
+    margin: 5% auto;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+
+}
+
+.primes-input {
+    margin-top: 10%;
+}
+
+.primes-input input[type=number] {
+    text-align: center;
+    font-size: 1.2em;
+    border-radius: 5px;
+    border: 1px solid #4e4e4e;
+}
+
+#inputButton {
+    width: 20%;
+    margin-top: 3%;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: black;
+    background-color: white;
+    transition: transform .2s;
+    transform: translateZ(0) scale(1);
+}
+
+#inputButton:hover {
+    transform: scale(1.25);
+}
+
+.primes-output {
+    margin-top: 10%;
+}
+
+.primes-output textarea {
+    font-size: 1.2em;
+    width: 80%;
+    height: 4em;
+}

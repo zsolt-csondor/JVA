@@ -1,0 +1,24 @@
+
+<div class="primes-container">
+
+    <h1>List of Primes</h1>
+    <p class="h1-description">Get prime numbers between 1 and 100.</p>
+
+    <div class="primes-input">
+        <input #inputLimit type="number" 
+            placeholder="5" 
+            onfocus="this.placeholder=''" 
+            onblur="this.placeholder='5'"
+            (keyup.enter)="getPrimeListButtonClick(inputLimit.value)"> 
+        <br/>
+        <button id="inputButton" (click)="getPrimeListButtonClick(inputLimit.value)">Go </button>
+    </div>
+
+    <div class="primes-output">
+        <textarea *ngIf="primes; else error">{{primes}}</textarea>
+
+        <ng-template #error>
+            <h2 class="h2-error">{{errorMessage}}</h2>
+        </ng-template>
+    </div>
+</div>
